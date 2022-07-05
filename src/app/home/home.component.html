@@ -1,46 +1,11 @@
 
-<div [ngClass]="box1">
-<img src="../../assets/gulab.jpg">
-<h3>₹200</h3>
-<button class="btn1" (click)="add()">+</button>
-<p class="counter">{{count}}</p>
-<button class="btn2" (click)="minus()">-</button>
+<div [ngClass]="box1" *ngFor="let f of foodArray">
+<img src="{{f.img}}">
+<h3>₹{{f.amt}}</h3>
+<button class="btn1" (click)="add(f)">+</button>
+<p class="counter">{{f.qty}}</p>
+<button class="btn2" (click)="minus(f)">-</button>
 <button class="btn3">Add To Card</button>
 </div>
 
-<div [ngClass]="box2">
-    <img src="../../assets/dosa.jpg">
-    <h3>₹200</h3>
-    <button class="btn1" (click)="add()">+</button>
-    <p class="counter">{{count}}</p>
-    <button class="btn2">-</button>
-    <button class="btn3">Add To Card</button>
-</div>
 
-<div [ngClass]="box3">
-    <img src="../../assets/noodles.jpg">
-    <h3>₹200</h3>
-    <button class="btn1">+</button>
-    <p class="counter">{{count}}</p>
-    <button class="btn2">-</button>
-    <button class="btn3">Add To Card</button>
-</div>
-
-<div [ngClass]="box4">
-    <img src="../../assets/pav-bhaji.jpg">
-    <h3>₹200</h3>
-    <button class="btn1">+</button>
-    <p class="counter">{{count}}</p>
-    <button class="btn2">-</button>
-    <button class="btn3">Add To Card</button>
-</div>
-
-<div [ngClass]="box5">
-    <img src="../../assets/khadvi.jpg">
-    <h3>₹200</h3>
-    <button class="btn1">+</button>
-    <p class="counter">{{count}}</p>
-    <button class="btn2">-</button>
-    <button class="btn3">Add To Card</button>
-    
-</div>
